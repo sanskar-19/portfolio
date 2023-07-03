@@ -12,11 +12,11 @@ const HomeWrapper = () => {
 
   const socialLinksList = [{ src: "linkedin.svg", href: "https://www.linkedin.com/in/sanskar-agrawal-cse/" }, { src: "twitter.svg", href: "https://www.linkedin.com/in/sanskar-agrawal-cse/" }]
   return (<>
-    <section className="w-[min(calc(100%-4rem),80rem)] flex-grow flex flex-col-reverse justify-start lg:flex-row gap-x-10 py-10">
+    <section className="w-[min(calc(100%-4rem),80rem)] flex-grow flex flex-col-reverse gap-y-4 sm:gap-y-0 justify-start lg:flex-row gap-x-10 py-10">
       <section className="w-full lg:w-1/2 flex flex-col gap-y-4 flex-grow">
         <h1 className="text-[2rem] text-center lg:text-left sm:text-[4rem] font-bold mt-auto">Sanskar Agrawal</h1>
-        <h2 className="text-xl font-light text-center lg:text-left leading-8">Got an exciting project to kickstart your business idea & need a <span className="text-greenPrimary "> Software Developer (Freelancer or Employee)</span>!?</h2>
-        <h2 className="text-xl font-light text-center lg:text-left leading-8"> Make sure to fill the form below to come closer to your dream business.</h2>
+        <h2 className="text-sm sm:text-xl font-light text-center lg:text-left sm:leading-8">Got an exciting project to kickstart your business idea & need a <span className="text-greenPrimary "> Software Developer (Freelancer or Employee)</span>!?</h2>
+        <h2 className="text-sm sm:text-xl font-light text-center lg:text-left sm:leading-8"> Make sure to fill the form below to come closer to your dream business.</h2>
         <section className="flex gap-x-4 mt-4 sm:flex-row flex-col justify-center lg:justify-start items-center gap-y-2 lg:items-start">
           <Button handleClick={handleContactClick} label={"Contact Me"} extraClass={"green-shadow"} styleType="primary" />
           <Button handleClick={handleDownloadResume} label={"View Experiences"} extraClass={""} styleType="secondary" />
@@ -30,7 +30,7 @@ const HomeWrapper = () => {
       </section>
       <section className="flex-col lg:flex-row lg:w-1/2 flex items-center justify-end flex-grow">
         <div className="profile-mask green-shadow">
-          <img src="profile.jpeg" alt="Couldn't load properly" className="w-[10rem] sm:w-[20rem] aspect-square lg:w-[25rem]" />
+          <img src="profile.jpeg" alt="Couldn't load properly" className="w-[15rem] sm:w-[20rem] aspect-square lg:w-[30rem]" />
         </div>
       </section>
     </section>

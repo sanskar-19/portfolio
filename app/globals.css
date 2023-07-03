@@ -25,11 +25,11 @@ body {
 }
 
 .primary-button{
-  @apply bg-greenPrimary border border-greenSecondary rounded-[6.25rem] w-full max-w-[12.25rem] h-12;
+  @apply bg-greenPrimary border border-greenSecondary rounded-[6.25rem] w-full max-w-[12.25rem] h-12 text-sm sm:text-base;
 }
 
 .secondary-button{
-  @apply bg-transparent border border-greenSecondary rounded-[6.25rem] w-full max-w-[12.25rem] h-12;
+  @apply bg-transparent border border-greenSecondary rounded-[6.25rem] w-full max-w-[12.25rem] h-12 text-sm sm:text-base;
   /* box-shadow: 0px 8px 30px 0px rgba(63, 142, 0, 0.50); */
 }
 
