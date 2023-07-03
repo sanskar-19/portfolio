@@ -4,7 +4,7 @@ import HomeWrapper from './_components/HomeWrapper';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between bg-backgroundPrimary">
+    <main className="flex h-[calc(100vh-5rem)] flex-col items-center justify-between bg-backgroundPrimary">
       <HomeWrapper />
     </main>
   )
