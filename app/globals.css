@@ -1,27 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-primary : #080808;
+  --text-primary : #ffffff;
+  --button-background-primary : #3F8E00;
+  --button-border-primary : #62BA1B; 
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  font-family: 'Poppins';
+}
+
+.primary-button{
+  @apply bg-greenPrimary border border-greenSecondary rounded-[6.25rem] w-full max-w-[12.25rem] h-12;
+}
+
+.secondary-button{
+  @apply bg-transparent border border-greenSecondary rounded-[6.25rem] w-full max-w-[12.25rem] h-12;
+  /* box-shadow: 0px 8px 30px 0px rgba(63, 142, 0, 0.50); */
+}
+
+.profile-mask{
+  clip-path: circle();
+}
+
+.green-shadow{
+  box-shadow: 0px 8px 30px 0px rgba(63, 142, 0, 0.50);
 }
