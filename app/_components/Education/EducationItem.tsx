@@ -8,7 +8,7 @@ type EducationProps = {
     qualification: string;
 }
 
-const Education = ({ institute, gpa, percentage, startDate, endDate, majors, qualification }: EducationProps) => {
+const EducationItem = ({ institute, gpa, percentage, startDate, endDate, majors, qualification }: EducationProps) => {
     return (<article>
         <h2 className="text-sm sm:text-xl font-light  lg:text-left sm:leading-8  text-greenPrimary">{qualification}</h2>
         <h2 className="text-sm sm:text-xl font-light  lg:text-left sm:leading-8">{majors}</h2>
@@ -18,4 +18,4 @@ const Education = ({ institute, gpa, percentage, startDate, endDate, majors, qua
     </article>);
 }
 
-export default Education;
+export default EducationItem;
