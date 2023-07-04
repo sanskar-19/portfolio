@@ -1,6 +1,11 @@
 import React from 'react';
-import Button from '@/components/Button';
 import HomeWrapper from './_components/HomeWrapper';
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Sanskar.me',
+  description: 'Got an interesting design and less time to build? Reach me out today and make your dream project live!',
+}
 
 export default function Home() {
   return (

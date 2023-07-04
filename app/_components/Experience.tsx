@@ -10,7 +10,7 @@ type ExperienceProps = {
 const Experience = ({ organization, profile, startDate, endDate, location, description }: ExperienceProps) => {
     return (<article className="flex justify-between flex-col gap-y-4 lg:flex-row">
         <div className="flex flex-col w-full lg:w-[70%] flex-grow-0">
-            <h2 className="text-sm sm:text-xl font-light  lg:text-left sm:leading-8 opacity-60">{profile}</h2>
+            <h2 className="text-sm sm:text-xl font-light  lg:text-left sm:leading-8 text-greenPrimary">{profile}</h2>
             <h2 className="text-sm sm:text-xl font-light  lg:text-left sm:leading-8">{organization}</h2>
             <div className="relative mt-4 px-4 sm:px-0">
                 {description?.map((achievement, index) => <h2 className="list-item text-sm sm:text-base font-light  lg:text-left sm:leading-8">{achievement}</h2>)}
