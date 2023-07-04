@@ -2,7 +2,7 @@ import { twMerge } from "tailwind-merge";
 
 interface PropTypes {
     label?: String | "Default";
-    handleClick: Function;
+    handleClick?: Function;
     extraClass?: String;
     type?: 'button' | 'submit';
     styleType: 'primary' | 'secondary';
@@ -15,15 +15,15 @@ const Button = ({ label, handleClick, extraClass, type, styleType }: PropTypes) 
         case "primary":
             baseClass = "primary-button";
             break;
-        
+
         case "secondary":
             baseClass = "secondary-button";
             break;
-        
+
     }
     return (
-        <button onClick={(event) => handleClick(event)} type={type} className={twMerge(`${baseClass} ${extraClass}`)}>{label}</button>
+        <button onClick={(event) => handleClick && handleClick(event)} type={type} className={twMerge(`${baseClass} ${extraClass}`)}>{label}</button>
     );
 }
- 
+
 export default Button;
