@@ -25,7 +25,8 @@ body {
 }
 
 *{
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
+  color:var(--text-primary);
 }
 
 ::-webkit-scrollbar{
