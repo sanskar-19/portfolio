@@ -6,8 +6,9 @@ interface PropTypes {
     extraClass?: String;
     type?: 'button' | 'submit';
     styleType: 'primary' | 'secondary';
+    disabled?: boolean
 }
-const Button = ({ label, handleClick, extraClass, type, styleType }: PropTypes) => {
+const Button = ({ label, handleClick, extraClass, type, styleType, disabled }: PropTypes) => {
     let baseClass = "";
 
     // Assign the style to the button for different variants
@@ -22,7 +23,7 @@ const Button = ({ label, handleClick, extraClass, type, styleType }: PropTypes) 
 
     }
     return (
-        <button onClick={(event) => handleClick && handleClick(event)} type={type} className={twMerge(`${baseClass} ${extraClass}`)}>{label}</button>
+        <button onClick={(event) => handleClick && handleClick(event)} type={type} className={twMerge(`${baseClass} ${disabled ? "pointer-events-none cursor-not-allowed grayscale" : "pointer-events-auto cursor-pointer grayscale-0"} ${extraClass}`)} disabled={disabled}>{label}</button>
     );
 }
 

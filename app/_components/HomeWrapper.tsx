@@ -1,12 +1,16 @@
 'use client'
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Button } from "@/components";
 import Education from "./Education";
 import Experience from "./Experience";
+import Popup from "@/components/Popup";
+import Contact from "./Popup/Contact";
 
 const HomeWrapper = () => {
+  const [open, setOpen] = useState(false);
+
   const handleContactClick = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    console.log(event);
+    setOpen(true)
   }
   const handleViewExperience = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     if (experienceRef?.current)
@@ -40,7 +44,10 @@ const HomeWrapper = () => {
     {/* Experience */}
     <Experience experienceRef={experienceRef} />
 
-    {/* </section> */}
+    {/* Contact popup */}
+    <Popup open={open} setOpen={setOpen} extraClass=" w-full max-w-[min(37.5rem,calc(100%-2rem))] lg:px-[6rem] px-[2rem]">
+      <Contact />
+    </Popup>
   </>);
 }
 
