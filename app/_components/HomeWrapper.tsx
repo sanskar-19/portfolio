@@ -8,6 +8,8 @@ import Contact from "./Popup/Contact";
 
 const HomeWrapper = () => {
   const [open, setOpen] = useState(false);
+  const experienceRef = useRef<HTMLDivElement>(null);
+  const educationRef = useRef<HTMLDivElement>(null);
 
   const handleContactClick = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     setOpen(true)
@@ -16,7 +18,11 @@ const HomeWrapper = () => {
     if (experienceRef?.current)
       experienceRef.current.scrollIntoView();
   }
-  const experienceRef = useRef<HTMLDivElement>(null);
+  const handleViewEducation = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    if (educationRef?.current)
+      educationRef.current.scrollIntoView();
+  }
+
   return (<>
     {/* <section className="container-wrapper scroll-smooth overflow-scroll"> */}
     {/* Hero section */}
@@ -26,8 +32,9 @@ const HomeWrapper = () => {
         <h2 className="text-sm sm:text-xl font-light text-center lg:text-left sm:leading-8">Got an exciting project to kickstart your business idea & need a <span className="text-greenPrimary "> Software Developer (Freelancer or Employee)</span>!?</h2>
         <h2 className="text-sm sm:text-xl font-light text-center lg:text-left sm:leading-8"> Make sure to fill the form below to come closer to your dream business.</h2>
         <section className="flex gap-x-4 mt-4 sm:flex-row flex-col justify-center lg:justify-start items-center gap-y-2 lg:items-start">
-          <Button handleClick={handleContactClick} label={"Get started"} extraClass={"green-shadow"} styleType="primary" />
-          <Button handleClick={handleViewExperience} label={"View Experience"} extraClass={""} styleType="secondary" />
+          {/* <Button handleClick={handleContactClick} label={"Get started"} extraClass={"green-shadow"} styleType="primary" /> */}
+          <Button handleClick={handleViewExperience} label={"View Experience"} extraClass={""} styleType="primary" />
+          <Button handleClick={handleViewEducation} label={"View Education"} extraClass={""} styleType="secondary" />
         </section>
       </section>
       <section className="flex-col lg:flex-row lg:w-1/2 flex items-center justify-end flex-grow">
@@ -39,7 +46,7 @@ const HomeWrapper = () => {
 
 
     {/* Education Section */}
-    <Education />
+    <Education educationRef={educationRef} />
 
     {/* Experience */}
     <Experience experienceRef={experienceRef} />
