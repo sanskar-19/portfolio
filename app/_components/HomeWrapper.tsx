@@ -11,9 +11,9 @@ const HomeWrapper = () => {
   const experienceRef = useRef<HTMLDivElement>(null);
   const educationRef = useRef<HTMLDivElement>(null);
 
-  const handleContactClick = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    setOpen(true)
-  }
+  // const handleContactClick = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+  //   setOpen(true)
+  // }
   const handleViewExperience = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     if (experienceRef?.current)
       experienceRef.current.scrollIntoView();
